@@ -6,13 +6,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "."),
-    },
-  },
-  build: {
-    rollupOptions: {
-      external: [/^@microsoft\/.*/],
-    },
+    alias: [
+      { find: /^@microsoft\/.*/, replacement: path.resolve(__dirname, "lib/connector-policy-monitor.ts") },
+      { find: "@", replacement: path.resolve(__dirname, ".") },
+    ],
   },
 });
