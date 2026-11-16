@@ -1,3 +1,4 @@
+export const startConnectorPolicyMonitor = () => {};
 export const useConnectorPolicyBlock = () => null;
 export const initPolicyMonitor = () => {};
 export const trackPolicyEvent = () => {};
